@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curl Command Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #curlForm {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input[type=text], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+        #curlCommand {
+            background: #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Curl Command Generator</h2>
+        <form id="curlForm">
+            <label for="protocol">Protocol:</label><br>
+            <select id="protocol" name="protocol">
+                <option value="http">HTTP</option>
+                <option value="https" selected>HTTPS</option>
+            </select><br><br>
+            <label for="url">URL:</label><br>
+            <input type="text" id="url" name="url"><br>
+            <label for="token">Authorization Token:</label><br>
+            <input type="text" id="token" name="token"><br>
+            <label for="headers">Headers (comma-separated key:value pairs):</label><br>
+            <textarea id="headers" name="headers"></textarea><br>
+            <label for="json">JSON Payload:</label><br>
+            <textarea id="json" name="json"></textarea><br>
+        </form>
+        <h3>Generated Curl Command:</h3>
+        <p id="curlCommand"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
