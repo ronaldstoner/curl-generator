@@ -20,7 +20,7 @@
             padding: 20px;
             border-radius: 5px;
         }
-        input[type=text], textarea {
+        input[type=text], textarea, select {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
@@ -45,11 +45,21 @@
             <select id="protocol" name="protocol">
                 <option value="http">HTTP</option>
                 <option value="https" selected>HTTPS</option>
-            </select><br><br>
+            </select><br>
+            <label for="method">Method:</label><br>
+            <select id="method" name="method">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+                <option value="OPTIONS">OPTIONS</option>
+            </select><br>
             <label for="url">URL:</label><br>
             <input type="text" id="url" name="url"><br>
             <label for="token">Authorization Token:</label><br>
             <input type="text" id="token" name="token"><br>
+            <label for="contentType">Content-Type:</label><br>
+            <input type="text" id="contentType" name="contentType"><br>
             <label for="headers">Headers (comma-separated key:value pairs):</label><br>
             <textarea id="headers" name="headers"></textarea><br>
             <label for="json">JSON Payload:</label><br>
